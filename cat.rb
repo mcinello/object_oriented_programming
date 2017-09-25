@@ -7,17 +7,17 @@ class Cat
   end
 
   def eats_at
-    puts "#{@name} eats at #{@meal_time}PM"
+    puts "#{@name} eats at #{@meal_time}"
   end
 
   def meow
-    puts "My name is #{@name} and I eat #{@preferred_food} at #{@meal_time}PM."
+    puts "My name is #{@name} and I eat #{@preferred_food} at #{@meal_time}."
   end
 
 end
 
-cat1 = Cat.new("Howie", "fish", "12")
-cat2 = Cat.new("Oliver", "chicken", "2")
+cat1 = Cat.new("Howie", "fish", "12 PM")
+cat2 = Cat.new("Oliver", "chicken", "2 PM")
 
 # puts cat1.inspect
 # puts cat2.inspect
@@ -28,6 +28,6 @@ cat2 = Cat.new("Oliver", "chicken", "2")
 # cat2.eats_at
 # puts cat2
 
-cat1.meow
+puts cat1.meow
 
-cat2.meow
+puts cat2.meow
