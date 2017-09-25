@@ -39,14 +39,20 @@ end
 nick = PaperBoy.new("Nick")
 bosh = PaperBoy.new("Bosh")
 
+#1st delivery
 nick.deliver(1, 70)
-bosh.deliver(1, 40)
-
 puts nick.quota
-puts bosh.quota
-
 puts nick.report
+
+bosh.deliver(1, 40)
+puts bosh.quota
 puts bosh.report
+#2nd delivery
 
 nick.deliver(1, 80)
 puts nick.quota
+puts nick.report
+
+bosh.deliver(1, 90)
+puts bosh.quota
+puts bosh.report
