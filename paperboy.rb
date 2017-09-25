@@ -31,7 +31,7 @@ class PaperBoy
 
   def report
     #return string of performance
-    puts "I'm #{@name}, I've delivered #{@experience} papers and I've earned $#{@earnings}"
+    puts "I'm #{@name}, I delivered #{@experience} papers today, and I've earned $#{@earnings} since doing this gig!"
   end
 
 end
@@ -40,19 +40,23 @@ nick = PaperBoy.new("Nick")
 bosh = PaperBoy.new("Bosh")
 
 #1st delivery
-nick.deliver(1, 70)
 puts nick.quota
+nick.deliver(1, 70)
 puts nick.report
+puts nick.quota
 
-bosh.deliver(1, 40)
 puts bosh.quota
+bosh.deliver(1, 40)
 puts bosh.report
+puts bosh.quota
 #2nd delivery
 
-nick.deliver(1, 80)
 puts nick.quota
+nick.deliver(1, 80)
 puts nick.report
+puts nick.quota
 
-bosh.deliver(1, 90)
 puts bosh.quota
+bosh.deliver(1, 90)
 puts bosh.report
+puts bosh.quota
