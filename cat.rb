@@ -10,16 +10,24 @@ class Cat
     puts "#{@name} eats at #{@meal_time}PM"
   end
 
+  def meow
+    puts "My name is #{@name} and I eat #{@preferred_food} at #{@meal_time}PM."
+  end
+
 end
 
 cat1 = Cat.new("Howie", "fish", "12")
 cat2 = Cat.new("Oliver", "chicken", "2")
 
-puts cat1.inspect
-puts cat2.inspect
+# puts cat1.inspect
+# puts cat2.inspect
+#
+# cat1.eats_at
+# puts cat1
+#
+# cat2.eats_at
+# puts cat2
 
-cat1.eats_at
-puts cat1
+cat1.meow
 
-cat2.eats_at
-puts cat2
+cat2.meow
