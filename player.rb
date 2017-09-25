@@ -27,7 +27,7 @@ class Player
     if @health_points < 1 #works
       @lives -= 1
       if @lives == 0
-        puts @lives
+        puts "#{@lives} lives! You lose."
         Player.new.restart
         return restart
       end
@@ -48,22 +48,12 @@ end
 player1 = Player.new
 puts player1.inspect
 
-# 20.times do
-#   player1.collect_treasure
-#   puts player1.inspect
-# end
-
-5.times do
-  player1.do_battle(10)
+20.times do
+  player1.collect_treasure
   puts player1.inspect
 end
 
-#   if @health_points < 1 #if health_points fall below 1, subtract 1 from lives, reset health_points to 10
-#       @lives -= 1
-#       @health_points = 10
-#       return health_points#?? how to call specific attribute from method??
-#       if @lives == 0
-#         Player.new.restart #if no more lives, method should run restart method
-#         return restart
-#       end
-#   end
+7.times do
+  player1.do_battle(10)
+  puts player1.inspect
+end
