@@ -7,20 +7,13 @@ class PaperBoy
   end
 
   def quota
-    #calculate and return quota for next delivery
-    #min papers = 50
-    #quota 50% of experience + min papers
     first_delivery = 50
-    @experience += (@experience * 0.50) + first_delivery
+    @experience = (@experience * 0.50) + first_delivery #current quota is 50
     return @experience
   end
 
   def deliver(start_address, end_address)
-    #2 house numbers needed - assume start smaller number than end
-    #return amount of money earned as a .to_f
-    #update experience
     total_houses = (start_address..end_address).to_a
-    puts total_houses.length
     total_houses.each do |address|
       if address <= 50
         @earnings += 0.25 # minimum earned = $12.5; adding 0.25 for every address delivered to
@@ -28,18 +21,18 @@ class PaperBoy
         @earnings += 0.50
       end
     end
-
     if total_houses.length < 50
       @earnings -= 2.00
     end
+    #update experience = if total_houses.length = 70, quota should be 85
+    @experience = total_houses.length
 
-    return @earnings
-
+    return @earnings, @experience
   end
 
   def report
     #return string of performance
-    puts "I'm #{@name}, I've delivered #{@experience} paperes and I've earned #{@earnings}"
+    puts "I'm #{@name}, I've delivered #{@experience} papers and I've earned $#{@earnings}"
   end
 
 end
@@ -58,3 +51,5 @@ nick.quota
 nick.deliver(1, 70)
 
 puts nick.inspect
+
+puts nick.quota
