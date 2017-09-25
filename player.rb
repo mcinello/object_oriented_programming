@@ -16,6 +16,7 @@ class Player
     @gold_coins += 1   #increases gold coins by 1
     if @gold_coins % 10 == 0
       Player.new.level_up #if gold coins is a multiple of 10, then run the level_up method
+      return level_up
     end
   end
 
@@ -31,7 +32,14 @@ class Player
 
   def restart
     Player.new.initialize #reset all attributes back to starting values
-
   end
 
+end
+
+player1 = Player.new
+puts player1.inspect
+
+20.times do
+  player1.collect_treasure
+  puts player1.inspect
 end
