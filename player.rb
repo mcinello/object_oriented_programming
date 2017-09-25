@@ -26,7 +26,7 @@ class Player
     @health_points -= damage #works
     if @health_points < 1
       @lives -= 1
-      # @health_points = 10
+      @health_points = 10
       return @lives, @health_points
     end
     return @health_points
@@ -46,7 +46,7 @@ puts player1.inspect
 #   puts player1.inspect
 # end
 
-player1.do_battle(10)
+player1.do_battle(12)
 puts player1.inspect
 
 #   if @health_points < 1 #if health_points fall below 1, subtract 1 from lives, reset health_points to 10
