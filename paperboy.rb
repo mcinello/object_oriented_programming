@@ -8,8 +8,7 @@ class PaperBoy
 
   def quota
     first_delivery = 50
-    @experience = (@experience * 0.50) + first_delivery #current quota is 50
-    return @experience
+    (@experience * 0.50) + first_delivery #current quota is 50
   end
 
   def deliver(start_address, end_address)
@@ -46,10 +45,13 @@ end
   #eg. if quota of 50 met, next time quota = 75
 
 nick = PaperBoy.new("Nick")
+bosh = PaperBoy.new("Bosh")
 
-nick.quota
 nick.deliver(1, 70)
-
-puts nick.inspect
+bosh.deliver(1, 40)
 
 puts nick.quota
+puts bosh.quota
+
+puts nick.report
+puts bosh.report
