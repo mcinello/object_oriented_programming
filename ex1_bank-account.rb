@@ -21,10 +21,7 @@ class BankAccount
 end
 
 first_account = BankAccount.new(1000.00)
-
 puts first_account.inspect
 
-#
-#
-# first_account.deposit(100.00)
-# puts first_account.inspect
+first_account.deposit(100.00)
+puts first_account.inspect
