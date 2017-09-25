@@ -10,9 +10,10 @@ class BankAccount
     return @balance
   end
 
-  # def withdraw(amount)
-  #   @balance -= amount
-  # end
+  def withdraw(amount)
+    @balance -= amount
+    return @balance
+  end
   #
   # def gain_interest(rate)
   #   @interest_rate
@@ -24,4 +25,7 @@ first_account = BankAccount.new(1000.00)
 puts first_account.inspect
 
 first_account.deposit(100.00)
+puts first_account.inspect
+
+first_account.withdraw(500.50)
 puts first_account.inspect
